@@ -8,3 +8,11 @@
 #pageWidth {
 	width: 133%;
 }
+
+#floatRight {
+	float: right;
+}
+
+#dropDown {
+	margin-left: -40px;
+}
