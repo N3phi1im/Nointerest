@@ -47,7 +47,7 @@
 								<li class="divider"></li>
 								<li><a ui-sref="#" class="glyphicon glyphicon-question-sign"> Help</a></li>
 								<li class="divider"></li>
-								<li><a ui-sref="#" ng-click="vm.HomeController.logOut()" class="glyphicon glyphicon-log-out"> Logout</a></li>
+								<li ng-controller="LoginController as vm"><a ui-sref="login" ng-click="vm.logOut()" class="glyphicon glyphicon-log-out logOutButton"> Logout</a></li>
 							</ul>
 						</li>
 					</ul>

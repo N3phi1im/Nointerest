@@ -50,3 +50,7 @@
 .form-horizontal {
 	text-align: left;
 }
+
+.logOutButton {
+	cursor: pointer;
+}
