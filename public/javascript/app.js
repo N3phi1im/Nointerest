@@ -11,7 +11,12 @@
 		.state('home' ,{
 			url: '/home',
 			templateUrl: 'views/Home.html'
+		})
+		.state('createAccount' ,{
+			url: '/createaccount',
+			templateUrl: 'views/createAccount.html'
 		});
+
 
 		$urlRouterProvider.otherwise('/');
 	}
