@@ -13,7 +13,7 @@
 		o.status = {};
 		if(getToken()) {
 			o.status.isLoggedIn = true;
-			o.status.userName = getUserName();
+			o.status.firstName = getFirstName();
 		}
 		o.setToken = setToken;
 		o.getToken = getToken;
@@ -57,12 +57,30 @@
 			removeToken();
 		}
 
-		// Put Token in client storage
+		// Put Token in Client Storage
 
 		function setToken(token) {
 			localStorage.setItem('token', token);
 			o.status.userName = getUserName();
 		}
 
+		// Get token from Client Storage
+
+		function getToken() {
+			return localStorage['token'];
+		}
+
+		// Remove Token from Client
+
+		function removeToken() {
+			localStorage.removeItem('token');
+			o.status.userName = null;
+		}
+
+		// Get Actual Name
+
+		function getFirstName() {
+			return JSON.parse(atob(getToken().split('.')[1])).firstName;
+		}
 	}
 })();
