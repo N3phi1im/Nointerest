@@ -14,7 +14,7 @@ var auth = jwt({secret: 'StuffandThings', userProperty: 'payload'});
 // Post Routes
 
 router.param('post', function(req, res, next, id) {
-	Post.find({_id: id}).populate('username').exec(function(err, posts) {
+	Post.find({_id: id}).populate('userName').exec(function(err, posts) {
 		if(err) return next(err);
 		req.post = posts[0];
 		next();
@@ -54,6 +54,22 @@ router.post('/v1/api/Post', function(req, res, next) {
 	createdPost.save(function(err, post) {
 		if(err) return next(err);
 		res.send({id: post._id});
+	});
+});
+
+// Comments to Post
+
+router.post('/v1/api/Post/:post/comment', auth, function(req, res, next) {
+	var newComment = req.body;
+	newComment.dateCreated = new Date();
+	newComment.user = req.payload.id;
+	Post.update({_id: req.post._id}, {$push: { comments: newComment }}, function(err, numberAffected) {
+		if(err) return next(err);
+		Post.findOne({_id: req.post._id}, function(err, post) {
+			if(err) return next(err);
+			var comment = post.comments[post.comments.length - 1];
+			res.send({_id: comment._id, dateCreated: comment.dateCreated});
+		});
 	});
 });
 

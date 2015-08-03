@@ -11,9 +11,10 @@
 		return o;
 
 		//add a new post 
+
 		function addPost (newPost) {
 			var q = $q.defer();
-			$http.post('/api/post', newPost).success(function(res){
+			$http.post('/v1/api/Post', newPost).success(function(res){
 				q.resolve();
 			});
 			return q.promise;

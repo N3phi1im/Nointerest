@@ -7,7 +7,7 @@
 
 	function HomeController(HomeFactory, UserFactory, $state) {
 		var vm = this;
-		vm.logOut = UserFactory.logout();
+		vm.logOut = UserFactory.logOut();
 
 	}
 })();
