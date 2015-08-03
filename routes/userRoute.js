@@ -26,15 +26,16 @@ router.post('/Register', function(req, res, next) {
 });
 
 // User Login Route
+	// Passport Local authentication with JWT
 
-router.post('/Login', function(req, res, next) {
-	if(!req.body.username || !req.body.password) return res.status(400).send('Please complete all fields');
-	passport.authenticate('local', function(err, user, info) {
-		if(err)  return next(err);
-		if(user)  return res.json({token: user.generateJWT()});
-		return res.status(400).send(info);
-	})(req, res, next);
-});
+	router.post('/Login', function(req, res, next) {
+		if(!req.body.username || !req.body.password) return res.status(400).send('Please complete all fields');
+		passport.authenticate('local', function(err, user, info) {
+			if(err)  return next(err);
+			if(user)  return res.json({token: user.generateJWT()});
+			return res.status(400).send(info);
+		})(req, res, next);
+	});
 
 // Error Handling Function
 
