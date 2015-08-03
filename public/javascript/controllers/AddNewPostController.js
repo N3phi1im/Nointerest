@@ -5,7 +5,7 @@
 
 	AddNewPostController.$inject = ['HomeFactory', 'UserFactory', '$state']; 
 
-	function addNewPostController(HomeFactory, UserFactory, $state) {
+	function AddNewPostController(HomeFactory, UserFactory, $state) {
 		var vm = this;
 		vm.post_object= {};
 		vm.logOut = UserFactory.logout();
