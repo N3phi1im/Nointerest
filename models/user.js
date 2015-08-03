@@ -38,7 +38,8 @@ UserSchema.methods.generateJWT = function() {
 	exp.setDate(today.getDate() + 3);
 	return jwt.sign({
 		id: this._id,
-		userName: this.userName,
+		firstName: this.firstName,
+		lastName: this.lastName,
 		exp: parseInt(exp.getTime() / 1000) 
 	}, 'StuffandThings');
 };
