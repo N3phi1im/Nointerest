@@ -13,7 +13,7 @@ var PostSchema = new mongoose.Schema({
 		type: Date,
 		default: null
 	},
-	userName: {
+	username: {
 		type: String,
 		required: true
 	},
