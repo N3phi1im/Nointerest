@@ -41,7 +41,7 @@
 		// Login User
 
 		function login(user) {
-			var u = { userName: user.userName.toLowerCase(), password: user.password};
+			var u = { username: user.username.toLowerCase(), password: user.password};
 			var q = $q.defer();
 			$http.post('/v1/api/Users/Login', u).success(function(res) {
 				setToken(res.token);
@@ -76,7 +76,7 @@
 
 		function removeToken() {
 			localStorage.removeItem('token');
-			o.status.userName = null;
+			o.status.username = null;
 		}
 
 		// Get Actual First Name

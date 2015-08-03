@@ -30,7 +30,7 @@
 
 		function register() {
 			var u = vm.user;
-			if(!u.userName || !u.firstName || !u.lastName || !u.password || !u.cpassword || !(u.password === u.cpassword)) {
+			if(!u.username || !u.firstName || !u.lastName || !u.password || !u.cpassword || !(u.password === u.cpassword)) {
 				$window.alert("Please complete all fields");
 				return false;
 			}

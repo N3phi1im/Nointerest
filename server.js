@@ -6,7 +6,6 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
-var app = express();
 
 // Models for Passport
 
@@ -25,6 +24,7 @@ var postRoute = require('./routes/postRoute');
 
 // Set Port for Server
 
+var app = express();
 var port = process.env.PORT || 3000;
 
 // Setup Paths
