@@ -35,6 +35,7 @@
 				return false;
 			}
 			UserFactory.register(u).then(function() {
+				vm.user = {};
 				$state.go('home');
 			});
 		}
