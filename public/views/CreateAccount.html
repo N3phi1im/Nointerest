@@ -1,0 +1,58 @@
+
+<div id="register">
+
+  <div id="loginBox" ng-controller="LoginController as vm">
+
+    <form class="form-horizontal">
+      <fieldset>
+        <legend>Register</legend>
+        <div class="form-group">
+          <label for="inputFirstName" class="col-lg-2 control-label">First name</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="FirstName" placeholder="First name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputLastName" class="col-lg-2 control-label">Last name</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="LastName" placeholder="Last name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputUserName" class="col-lg-2 control-label">User name</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="UserName" placeholder="User name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmaleaddress" class="col-lg-2 control-label">Email address</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="Password" placeholder="Email address">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassWord" class="col-lg-2 control-label">Password</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="Password" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="col-lg-2 control-label">Confirm password</label>
+          <div class="col-lg-10">
+            <input type="password" class="form-control" id="Password" placeholder="Confirm password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <button type="reset" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <div id="createAccount">
+      <a ui-sref="">Create an account.</a>
+      <a ui-sref="CreateAccount">Create an account.</a>  
+
+    </div>
+  </div>
