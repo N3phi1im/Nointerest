@@ -11,6 +11,7 @@ var app = express();
 // Models for Passport
 
 require('./models/user');
+require('./models/post');
 require('./config/passport');
 
 // Connect to the DB
@@ -20,6 +21,7 @@ mongoose.connect('mongodb://localhost/NoInterest');
 // Routing
 
 var userRoute = require('./routes/userRoute');
+var postRoute = require('./routes/postRoute');
 
 // Set Port for Server
 
@@ -60,6 +62,7 @@ app.get('/', function(req, res) {
 // Use Routes for server
 
 app.use('/v1/api/Users', userRoute);
+app.use('/', postRoute);
 
 // Start server Listening at set Port
 
