@@ -10,7 +10,6 @@
 		o.addPost = addPost;
 		return o;
 
-
 		//add a new post 
 		function addPost (newPost) {
 			var q = $q.defer();
