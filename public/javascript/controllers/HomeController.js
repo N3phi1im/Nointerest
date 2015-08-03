@@ -3,9 +3,11 @@
 	angular.module('app')
 	.controller('HomeController', HomeController);
 
-	HomeController.$inject = ['HomeFactory'];
+	HomeController.$inject = ['HomeFactory', 'UserFactory, $state'];
 
-	function HomeController(HomeFactory) {
+	function HomeController(HomeFactory, UserFactory, $state) {
 		var vm = this;
+		vm.logOut = UserFactory.logout();
+
 	}
 })();
