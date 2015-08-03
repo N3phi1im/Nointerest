@@ -43,7 +43,7 @@
 		function login(user) {
 			var u = { userName: user.userName.toLowerCase(), password: user.password};
 			var q = $q.defer();
-			$http.post('/v1/api/User/Login', u).success(function(res) {
+			$http.post('/v1/api/Users/Login', u).success(function(res) {
 				setToken(res.token);
 				o.status.isLoggedIn = true;
 				q.resolve();
