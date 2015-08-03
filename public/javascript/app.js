@@ -15,7 +15,12 @@
 		.state('CreateAccount', {
 			url: '/createaccount',
 			templateUrl: 'views/CreateAccount.html'
+		})
+		.state('addNewPost', {
+			url: '/post',
+			templateUrl: 'views/AddNewPost.html'
 		});
+
 
 		$urlRouterProvider.otherwise('/');
 	}
