@@ -25,3 +25,10 @@
 	text-align: center;
 	margin-top: 10px;
 }
+
+#register {
+	margin-top: 15%;
+	width: 500px;
+	margin-right: auto;
+	margin-left: auto;
+}
