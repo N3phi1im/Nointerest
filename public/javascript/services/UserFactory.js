@@ -1,11 +1,11 @@
 (function() {
 	'use strict';
 	angular.module('app')
-	.factory('HomeFactory', HomeFactory);
+	.factory('UserFactory', UserFactory);
 
-	HomeFactory.$inject = ['$http', '$q'];
+	UserFactory.$inject = ['$http', '$q'];
 
-	function HomeFactory($http, $q) {
+	function UserFactory($http, $q) {
 		var o = {};
 		
 		return o;
