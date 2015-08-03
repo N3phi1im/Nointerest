@@ -1,5 +1,5 @@
 #loginBox {
-	width: 450px;
+	width: 600px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 15%;
@@ -34,9 +34,19 @@
 }
 
 .control-label {
-	width: 35%;
+	width: 25%;
 }
 
 .col-lg-10 {
-	width: 50%;
+	width: 100%;
+	text-align: center;
+	margin-left: 0px;
+}
+
+.control-label {
+	text-align: left;
+}
+
+.form-horizontal {
+	text-align: left;
 }
