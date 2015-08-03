@@ -3,9 +3,9 @@
 	angular.module('app')
 	.controller('HomeController', HomeController);
 
-	HomeController.$inject = [];
+	HomeController.$inject = ['HomeFactory'];
 
-	function HomeController() {
+	function HomeController(HomeFactory) {
 		var vm = this;
 		vm.title = 'No interest';
 	}

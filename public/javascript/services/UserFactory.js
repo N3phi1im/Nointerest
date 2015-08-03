@@ -14,13 +14,14 @@
 		if(getToken()) {
 			o.status.isLoggedIn = true;
 			o.status.firstName = getFirstName();
+			o.status.lastName = getLastName();
 		}
 		o.setToken = setToken;
 		o.getToken = getToken;
 		o.removeToken = removeToken;
 		o.register = register;
 		o.login = login;
-		o.logout = logout;
+		o.logOut = logOut;
 		return o;
 
 		// Functions list
@@ -52,7 +53,7 @@
 
 		// Logout User
 
-		function logout() {
+		function logOut() {
 			o.status.isLoggedIn = false;
 			removeToken();
 		}
@@ -61,13 +62,14 @@
 
 		function setToken(token) {
 			localStorage.setItem('token', token);
-			o.status.userName = getUserName();
+			o.status.firstName = getFirstName();
+			o.status.lastName = getLastName();
 		}
 
 		// Get token from Client Storage
 
 		function getToken() {
-			return localStorage['token'];
+			return localStorage.token;
 		}
 
 		// Remove Token from Client
@@ -77,10 +79,16 @@
 			o.status.userName = null;
 		}
 
-		// Get Actual Name
+		// Get Actual First Name
 
 		function getFirstName() {
 			return JSON.parse(atob(getToken().split('.')[1])).firstName;
+		}
+
+		// Get Actual Last Name
+
+		function getLastName() {
+			return JSON.parse(atob(getToken().split('.')[1])).lastName;
 		}
 	}
 })();
