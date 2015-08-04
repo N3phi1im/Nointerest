@@ -12,7 +12,7 @@
 
 		//add a new post 
 
-		function addPost (newPost) {
+		function addPost(newPost) {
 			var q = $q.defer();
 			$http.post('/v1/api/Post', newPost).success(function(res){
 				q.resolve();

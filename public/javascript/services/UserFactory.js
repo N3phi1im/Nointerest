@@ -15,6 +15,7 @@
 			o.status.isLoggedIn = true;
 			o.status.firstName = getFirstName();
 			o.status.lastName = getLastName();
+			o.status.username = getUserName();
 		}
 		o.setToken = setToken;
 		o.getToken = getToken;
@@ -64,6 +65,7 @@
 			localStorage.setItem('token', token);
 			o.status.firstName = getFirstName();
 			o.status.lastName = getLastName();
+			o.status.username = getUserName();
 		}
 
 		// Get token from Client Storage
@@ -89,6 +91,12 @@
 
 		function getLastName() {
 			return JSON.parse(atob(getToken().split('.')[1])).lastName;
+		}
+
+		// Get User Name
+
+		function getUserName() {
+			return JSON.parse(atob(getToken().split('.')[1])).username;
 		}
 	}
 })();
