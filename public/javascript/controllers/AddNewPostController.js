@@ -7,17 +7,12 @@
 
 	function AddNewPostController(HomeFactory, UserFactory, $state) {
 		var vm = this;
-		vm.post_object= {};
-		vm.logOut = UserFactory.logout();
 
 		vm.addPost = function () {
-			UserFactory.login(vm.post).then(function() {
+			vm.post.username = UserFactory.status.username;
+			HomeFactory.addPost(vm.post).then(function() {
 				vm.post = {};
 				$state.go('home');
 			});
 		};
-
 	}})();
-
-
-
