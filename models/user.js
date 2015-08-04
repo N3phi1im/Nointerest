@@ -39,7 +39,8 @@ UserSchema.methods.generateJWT = function() {
 		id: this._id,
 		firstName: this.firstName,
 		lastName: this.lastName,
-		exp: parseInt(exp.getTime() / 1000) 
+		username: this.username,
+		exp: parseInt(exp.getTime() / 1000)
 	}, 'StuffandThings');
 };
 
