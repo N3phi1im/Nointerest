@@ -3,13 +3,16 @@
 	angular.module('app')
 	.controller('IndexController', IndexController);
 
-	IndexController.$inject = [];
+	IndexController.$inject = ['HomeFactory', 'UserFactory'];
 
-	function IndexController() {
+	function IndexController(HomeFactory, UserFactory) {
 
 		// Declarations
-  
+
 		var vm = this;
-		vm.title = 'Welcome to our App!';
+		vm.status = UserFactory.status;
+		
+
+
 	}
 })();

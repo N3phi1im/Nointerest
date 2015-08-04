@@ -16,14 +16,15 @@
 			o.status.firstName = getFirstName();
 			o.status.lastName = getLastName();
 			o.status.username = getUserName();
-		}
-		o.setToken = setToken;
-		o.getToken = getToken;
-		o.removeToken = removeToken;
-		o.register = register;
-		o.login = login;
-		o.logOut = logOut;
-		return o;
+		} else { o.status.firstName = "Sign In";
+	}
+	o.setToken = setToken;
+	o.getToken = getToken;
+	o.removeToken = removeToken;
+	o.register = register;
+	o.login = login;
+	o.logOut = logOut;
+	return o;
 
 		// Functions list
 
@@ -57,6 +58,7 @@
 		function logOut() {
 			o.status.isLoggedIn = false;
 			removeToken();
+			o.status.firstName = "Sign In";
 		}
 
 		// Put Token in Client Storage

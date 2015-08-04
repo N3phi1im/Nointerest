@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.css">
 	<link rel="stylesheet" type="text/css" href="/css/site.css">
 </head>
-<body>
+<body ng-controller="IndexController as vm">
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<!-- Nav buttons -->
@@ -33,25 +33,30 @@
 				<button type="submit" class="btn btn-default">Submit</button>
 			</form>
 
+			
 			<!-- Dropdown -->
-			<div id="floatRight">
+			<div id="floatRight" class="navbar-right">
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" id="dropDownToggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle capital" id="dropDownToggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu" id="dropDown">
 								<li><a href="#" class="glyphicon glyphicon-cog"> Settings</a></li>
 								<li><a ui-sref="about" class="glyphicon glyphicon-user"> About</a></li>
 								<li class="divider"></li>
 								<li><a ui-sref="#" class="glyphicon glyphicon-question-sign"> Help</a></li>
 								<li class="divider"></li>
-								<li ng-controller="LoginController as vm"><a ui-sref="login" ng-click="vm.logOut()" class="glyphicon glyphicon-log-out logOutButton"> Logout</a></li>
+								<li ng-controller="LoginController as vm"><a  ng-click="vm.logOut()" ui-sref="login" class="glyphicon glyphicon-log-out logOutButton"> Logout</a></li>
 							</ul>
 						</li>
 					</ul>
 				</div>
 			</div>
+
+			<div id="userName" class="navbar-right">
+				{{vm.status.firstName}}
+			</div>
+
 		</div>
 	</nav>
 

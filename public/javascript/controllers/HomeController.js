@@ -15,5 +15,6 @@
 		console.log(vm.posts);
 
 
+
 	}
 })();
