@@ -1,6 +1,12 @@
+
+// Declare Dependencies
+
 var mongoose = require('mongoose');
 
-var PostSchema = new mongoose.Schema({ 
+// Post Template
+
+var PostSchema = new mongoose.Schema({
+	title: String,
 	img: {
 		type: String,
 		required: true
@@ -23,5 +29,7 @@ var PostSchema = new mongoose.Schema({
 		dateCreated: Date
 	}]
 });
+
+// Module ready for use
 
 mongoose.model('Post', PostSchema);

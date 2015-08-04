@@ -6,6 +6,9 @@
 	HomeController.$inject = ['HomeFactory', 'UserFactory, $state'];
 
 	function HomeController(HomeFactory, UserFactory, $state) {
+
+		// Declarations
+  
 		var vm = this;
 		vm.logOut = UserFactory.logOut();
 
