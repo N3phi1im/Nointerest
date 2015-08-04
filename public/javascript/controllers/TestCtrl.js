@@ -1,23 +1,22 @@
 angular.module('app').controller('TestCtrl', function ($scope, $modal, $log) {
 
-  $scope.open = function (url) {
+  $scope.open = function (post) {
 
     var modalInstance = $modal.open({
       animation: $scope.animationsEnabled,
       templateUrl: 'myModalContent.html',
       controller: 'ModalInstanceCtrl',
-      size: 'lg',
       resolve: {
-        imageURL: function () {
-          return url;
+        post: function () {
+          return post;
         }
       }
     });
   };
 });
 
-angular.module('app').controller('ModalInstanceCtrl', function ($scope, $modalInstance, imageURL) {
-  $scope.url = imageURL;
+angular.module('app').controller('ModalInstanceCtrl', function ($scope, $modalInstance, post) {
+  $scope.post = post;
 
   $scope.ok = function () {
     $modalInstance.close();

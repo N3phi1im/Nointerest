@@ -2,8 +2,8 @@
 	<div id="wrapper">
 		<div id="columns" ng-controller="HomeController as vm" >
 			<!-- New pins -->
-			<div class="pin" ng-repeat="post in vm.posts">
-				<img src="{{post.img}}"  ng-click="open('{{post.img}}')"/>
+			<div class="pin" ng-repeat="post in vm.posts | orderBy: '-dateCreated'">
+				<img src="{{post.img}}"  ng-click="open(post)"/>
 				<a href="{{post.url}}" target="_blank">
 					<h4>
 						{{post.title}}
