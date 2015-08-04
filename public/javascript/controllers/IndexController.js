@@ -11,7 +11,7 @@
 
 		var vm = this;
 		vm.status = UserFactory.status;
-		
+
 
 
 	}
