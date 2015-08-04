@@ -6,6 +6,9 @@
 	IndexController.$inject = [];
 
 	function IndexController() {
+
+		// Declarations
+  
 		var vm = this;
 		vm.title = 'Welcome to our App!';
 	}
