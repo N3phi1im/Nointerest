@@ -1,22 +1,22 @@
 <div ng-controller="TestCtrl">
 	<div id="wrapper">
-		<div id="columns">
+		<div id="columns" ng-controller="HomeController as vm" >
 			<!-- New pins -->
-			<div class="pin" >
-				<img src="https://upload.wikimedia.org/wikipedia/en/6/69/Audi_R8_3_Quarter.jpg"  ng-click="open('https://upload.wikimedia.org/wikipedia/en/6/69/Audi_R8_3_Quarter.jpg')"/>
-				<a href="http://www.audi.com" target="_blank">
+			<div class="pin" ng-repeat="post in vm.posts">
+				<img src="{{post.img}}"  ng-click="open('{{post.img}}')"/>
+				<a href="{{post.url}}" target="_blank">
 					<h4>
-						I love Audi.
+						{{post.title}}
 					</h4>
 				</a>
 
 				<!-- Modal -->
 				<script type="text/ng-template" id="myModalContent.html">
 					<div class="modal-header">
-						<h3 class="modal-title">I love Audi.</h3>
+						<h3 class="modal-title">{{post.title}}</h3>
 					</div>
 					<div class="modal-body">
-						<img src="{{url}}" alt="" class="img-responsive">
+						<img src="{{post.img}}" alt="" class="img-responsive">
 
 					</div>
 					<div class="modal-footer">
