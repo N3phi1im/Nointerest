@@ -1,4 +1,3 @@
-
 angular.module('app').controller('TestCtrl', function ($scope, $modal, $log) {
 
   $scope.open = function (url) {
@@ -17,15 +16,7 @@ angular.module('app').controller('TestCtrl', function ($scope, $modal, $log) {
   };
 });
 
-// Please note that $modalInstance represents a modal window (instance) dependency.
-// It is not the same as the $modal service used above.
-
 angular.module('app').controller('ModalInstanceCtrl', function ($scope, $modalInstance, imageURL) {
-
-  // $scope.items = items;
-  // $scope.selected = {
-  //   item: $scope.items[0]
-  // };
   $scope.url = imageURL;
 
   $scope.ok = function () {
