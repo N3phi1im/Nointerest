@@ -6,20 +6,62 @@
 	HomeFactory.$inject = ['UserFactory', '$http', '$q'];
 
 	function HomeFactory(UserFactory, $http, $q) {
+
+		// UserFactory Operations shortcuts
+
 		var o = {};
+		o.posts = [];
 		o.addPost = addPost;
+		o.deletePost = deletePost;
+		o.getPost = getPost;
+		getPosts();
 		return o;
 
-		//add a new post
+		// Functions list
 
-		function addPost(newPost) {
+		// Add New Post
+
+		function addPost(post) {
 			var q = $q.defer();
 			console.log(UserFactory.status);
-			$http.post('/v1/api/Post', newPost).success(function(res){
+			$http.post('/v1/api/Post', post).success(function(res){
+				post._id = res.id;
+				post.dateCreated = new Date();
+				o.posts.push(post);
 				q.resolve();
+			}).error(function(res) {
+				q.reject(res);
 			});
 			return q.promise;
 		}
-	}
 
+		// Delete Post by ID
+
+		function deletePost(Post) {
+			$http.post('/v1/api/deletePost/' + post._id).success(function(res) {
+				o.posts.splice(o.posts.indexOf(post), 1);
+			});
+		}
+
+		// Retrieve Post by ID
+
+		function getPost(id) {
+			var q = $q.defer();
+			$http.get('/v1/api/Post/' + id).success(function(res) {
+				q.resolve(res);
+			});
+			return q.promise;
+		}
+
+		// Retrieve all Posts
+
+		function getPosts() {
+			$http.get('/v1/api/Post').success(function(res) {
+				for (var i = 0; i < res.length; i += 1) {
+					res[i].dateCreated = new Date(res[i].dateCreated);
+					o.posts.push(res[i]);
+				}
+			});
+		}
+	}
 })();
