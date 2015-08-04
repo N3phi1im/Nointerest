@@ -1,3 +1,7 @@
+body {
+	font-family: "Helvetica Neue","Helvetica";
+}
+
 #loginBox {
 	width: 600px;
 	margin-left: auto;
@@ -71,12 +75,6 @@ h5 {
 	margin-right: 10px;
 }
 
-/*	.img-responsive {
-	border-radius: 10px 10px 0px 0px;*/
-}
-
-/*---------------------------------------------------------------------------*/
-
 #wrapper {
 	width: 100%;
 	max-width: 100%;
@@ -146,4 +144,22 @@ h5 {
 
 #bs-example-navbar-collapse-1 {
 	padding: 0px;
+}
+
+.img-responsive {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.modal-body {
+	padding: 0px;
+	background-color: black;
+}
+
+h4 {
+	font-family: "Helvetica Neue","Helvetica";
+	font-size: 14px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: justify;
 }
