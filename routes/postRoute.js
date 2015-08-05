@@ -13,10 +13,10 @@ var auth = jwt({secret: 'StuffandThings', userProperty: 'payload'});
 
 // Post Routes
 
-router.param('post', function(req, res, next, id) {
-	Post.find({_id: id}).populate('username').exec(function(err, posts) {
+router.param('post', function(req, res, next, _id) {
+	Post.findOne({_id: _id}).exec(function(err, posts) {
 		if(err) return next(err);
-		req.post = posts[0];
+		req.post = posts;
 		next();
 	});
 });

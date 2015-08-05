@@ -3,7 +3,7 @@
 		<div id="columns" ng-controller="HomeController as vm" >
 			<!-- New pins -->
 			<div class="pin" ng-repeat="post in vm.posts | orderBy: '-dateCreated' | filter: search">
-				<img src="{{post.img}}"  ng-click="open(post)"/>
+				<img ng-src="{{post.img}}"  ng-click="open(post)"/>
 				<a href="{{post.url}}" target="_blank">
 					<h4>
 						{{post.title}}
@@ -17,7 +17,7 @@
 						<h3 class="modal-title">{{post.title}}</h3>
 					</div>
 					<div class="modal-body">
-						<img src="{{post.img}}" alt="" class="img-responsive">
+						<img ng-src="{{post.img}}" alt="" class="img-responsive">
 
 					</div>
 					<div class="modal-footer">
