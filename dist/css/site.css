@@ -244,3 +244,9 @@ textarea {
   font-size: 12px;
   border-radius: 1px;
 }
+
+#userImg {
+  width: 10px;
+  heigth: 10px;
+  position: center;
+}
