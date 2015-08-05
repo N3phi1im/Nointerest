@@ -190,3 +190,58 @@ h4 {
   padding-right: 5px;
   text-align: justify;
 }
+
+div.show-image {
+  position: relative;
+  float: left;
+}
+
+div.show-image:hover img {
+  opacity: 0.5;
+}
+
+div.show-image:hover button {
+  display: block;
+}
+
+div.show-image button {
+  position: absolute;
+  display: none;
+}
+
+div.show-image button.deleteButton {
+  top: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  font-weight: bolder;
+}
+
+#addHashtag {
+  border-radius: 50%;
+  box-shadow: none;
+  color: white;
+  background-color: black;
+  border-width: 2px;
+  margin: 2px 0;
+  border-color: #666666;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+  width: 50%;
+}
+
+.hashList {
+  margin: 5px;
+}
+
+#hashtagWell {
+  height: 20px;
+  padding: 2px;
+  font-size: 11px;
+  margin: 5px;
+  border-radius: 0px;
+}
