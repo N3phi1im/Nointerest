@@ -16,8 +16,7 @@
 			o.status.firstName = getFirstName();
 			o.status.lastName = getLastName();
 			o.status.username = getUserName();
-		} else { o.status.firstName = "Sign In";
-	}
+		} else { o.status.firstName = "Sign In"; }
 	o.setToken = setToken;
 	o.getToken = getToken;
 	o.removeToken = removeToken;
