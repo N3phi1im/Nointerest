@@ -2,7 +2,7 @@
 	<div id="wrapper">
 		<div id="columns" ng-controller="HomeController as vm" >
 			<!-- New pins -->
-			<div class="pin" ng-repeat="post in vm.posts | orderBy: '-dateCreated' | searchFilter: search">
+			<div class="pin" ng-repeat="post in vm.posts | orderBy: '-dateCreated' | searchFilter: ix.search">
 				<img ng-src="{{post.img}}"  ng-click="open(post)"/>
 				<a href="{{post.url}}" target="_blank">
 					<h4>
