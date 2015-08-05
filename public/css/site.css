@@ -1,8 +1,18 @@
 body {
 	font-family: "Helvetica Neue","Helvetica";
+	overflow-x: hidden;
 }
-a {
-	color: white;
+
+.background {
+	width: 100vw;
+	height: 100vh;
+	background-size: cover;
+	background-image: url('http://www.hdwallpapers.in/walls/beach_sunset-wide.jpg');
+
+}
+
+.navbar {
+	margin-bottom: 0px;
 }
 
 h1 {
@@ -10,7 +20,8 @@ h1 {
 	text-align: center;
 	font-family: pacifico;
 	font-size: 100px;
-	margin-top: 5%;
+	padding-top: 5%;
+	margin-top: 0px;
 }
 
 #loginBox {
