@@ -19,6 +19,9 @@
 		.state('addNewPost', {
 			url: '/post',
 			templateUrl: 'views/AddNewPost.html'
+		}).state('profile', {
+			url: '/profile',
+			templateUrl: 'views/Profile.html'
 		});
 
 

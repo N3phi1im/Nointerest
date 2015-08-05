@@ -12,6 +12,7 @@
 		var vm = this;
 		vm.logOut = UserFactory.logOut;
 		vm.posts = HomeFactory.posts;
+		vm.delete = HomeFactory.deletePost;
 
 	}
 })();
