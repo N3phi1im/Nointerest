@@ -19,13 +19,25 @@
       <div class="form-group">
         <label for="photoTitle" class="col-lg-2 control-label">Photo title</label>
         <div class="col-lg-10">
-          <input type="text" class="form-control" id="photoTitle" placeholder="Add title here" ng-model="vm.post.title">
+          <input type="text" class="form-control" id="photoTitle" placeholder="Add title here" maxlength="50" ng-model="vm.post.title">
         </div>
       </div>
 
       <div class="form-group">
+        <label for="hashtag" class="col-lg-2 control-label">Description</label>
+        <div class="col-sm-12">
+          <input type="text" class="form-control" id="hashtag" ng-list placeholder="#hashtag" ng-model="vm.post.hashtag">
+        </div> 
+      </div>
+
+      <div>
+        <span class="btn btn-default hashList" ng-repeat="tag in vm.post.hashtag">#{{tag}}</span>
+      </div>
+      
+
+      <div class="form-group">
         <div class="col-lg-10 col-lg-offset-2">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-success">Submit</button>
           <button type="button" ui-sref="home" class="btn btn-danger">Cancel</button>
         </div>
       </div>
