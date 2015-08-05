@@ -3,13 +3,17 @@
 		<div id="columns" ng-controller="HomeController as vm" >
 			<!-- New pins -->
 			<div class="pin" ng-repeat="post in vm.posts | orderBy: '-dateCreated' | filter: search">
-				<img ng-src="{{post.img}}"  ng-click="open(post)"/>
-				<a href="{{post.url}}" target="_blank">
-					<h4>
-						{{post.title}}
-					</h4>
-				</a>
-				<button type="button" class='btn btn-danger btn-xs' ng-click='vm.delete(post)'>x</button>
+				<div class="show-image">
+					<img ng-src="{{post.img}}"  ng-click="open(post)"/>
+					<a href="{{post.url}}" target="_blank">
+						<h4>
+							{{post.title}}
+						</h4>
+					</a>
+
+
+					<button type="button" class='btn btn-danger btn-xs deleteButton' ng-click='vm.delete(post)'>X</button>
+				</div>
 
 				<!-- Modal -->
 				<script type="text/ng-template" id="myModalContent.html">

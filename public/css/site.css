@@ -191,3 +191,26 @@ h4 {
 	padding-right: 5px;
 	text-align: justify;
 }
+
+div.show-image {
+	position: relative;
+	float:left;
+	margin:5px;
+}
+div.show-image:hover img{
+	opacity:0.5;
+}
+div.show-image:hover button {
+	display: block;
+}
+div.show-image button {
+	position:absolute;
+	display:none;
+}
+div.show-image button.deleteButton {
+	top: 5px;
+	right: 5px;
+	width: 24px;
+	height: 24px;
+	font-weight: bolder;
+}

@@ -38,9 +38,12 @@
 		// Delete Post by ID
 
 		function deletePost(post) {
+			var q = $q.defer();
 			$http.post('/v1/api/deletePost/' + post._id).success(function(res) {
 				o.posts.splice(o.posts.indexOf(post), 1);
+				q.resolve();
 			});
+			return q.promise;
 		}
 
 		// Retrieve Post by ID
