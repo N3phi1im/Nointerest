@@ -10,7 +10,7 @@
 					</h4>
 				</a>
 			</hr>
-			<span class="well" id="hashtagWell" ng-repeat="hash in post.hashtag" ng-hide="!post.hashtag">
+			<span class="well" id="hashtagWell" ng-click="ix.search = hash" ng-repeat="hash in post.hashtag" ng-hide="!post.hashtag">
 				#{{hash}}
 			</span>	
 

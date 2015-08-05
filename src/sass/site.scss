@@ -134,7 +134,6 @@ h5 {
 	padding-bottom: 0px;
 	background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
 	opacity: 1;
-	border-bottom-width: 6px;
 	-webkit-transition: all .2s ease;
 	-moz-transition: all .2s ease;
 	-o-transition: all .2s ease;
@@ -239,9 +238,6 @@ textarea {
 	height: 20px;
 	padding: 2px;
 	font-size: 12px;
-	margin: 5px;
-	border-radius: 0px;
+	border-radius: 1px;
 }
-
-
 
