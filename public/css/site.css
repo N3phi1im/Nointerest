@@ -28,7 +28,7 @@ h1 {
 #floatRight {
 	height: 50px;
 	width: 25px;
-	margin-right: 0px;
+	margin-right: 5px;
 }
 
 #dropDown {
@@ -39,6 +39,7 @@ h1 {
 #dropDownToggle {
 	margin-right: auto;
 	width: auto;
+	padding-left: 5px;
 }
 
 #createAccount {
