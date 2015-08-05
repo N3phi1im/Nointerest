@@ -10,8 +10,8 @@
 					</h4>
 				</a>
 			</hr>
-			<span class="well" id="hashtagWell" ng-hide="!post.hashtag">
-				{{post.hashtag}}
+			<span class="well" id="hashtagWell" ng-repeat="hash in post.hashtag" ng-hide="!post.hashtag">
+				#{{hash}}
 			</span>	
 
 			<!-- Modal -->
@@ -24,6 +24,10 @@
 
 				</div>
 				<div class="modal-footer">
+					<span class="well" id="hashtagWell" ng-repeat="hash in post.hashtag" ng-hide="!post.hashtag">
+						#{{hash}}
+					</span>
+					
 					<button class="btn btn-primary" ng-click="ok()">OK</button>
 					<button class="btn btn-danger" ng-click="cancel()">Cancel</button>
 				</div>
