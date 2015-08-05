@@ -23,7 +23,6 @@
 
 		function addPost(post) {
 			var q = $q.defer();
-			console.log(UserFactory.status);
 			$http.post('/v1/api/Post', post).success(function(res){
 				post._id = res.id;
 				post.dateCreated = new Date();
