@@ -9,10 +9,10 @@
 
 		// Declarations
 
-		var vm = this;
-		vm.status = UserFactory.status;
+		var ix = this;
+		ix.status = UserFactory.status;
 
-
+		// Functions list
 
 	}
 })();
