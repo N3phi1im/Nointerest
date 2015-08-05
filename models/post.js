@@ -23,9 +23,7 @@ var PostSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
-	hashtag: {
-		type: String
-	}
+	hashtag: [String]
 });
 
 // Module ready for use
