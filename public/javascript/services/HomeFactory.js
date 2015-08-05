@@ -37,7 +37,7 @@
 
 		// Delete Post by ID
 
-		function deletePost(Post) {
+		function deletePost(post) {
 			$http.post('/v1/api/deletePost/' + post._id).success(function(res) {
 				o.posts.splice(o.posts.indexOf(post), 1);
 			});
