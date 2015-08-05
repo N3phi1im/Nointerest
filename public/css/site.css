@@ -7,8 +7,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background-size: cover;
-	background-image: url('http://www.hdwallpapers.in/walls/beach_sunset-wide.jpg');
-
+	background-image: url('sunset.jpg');
 }
 
 .navbar {
@@ -83,6 +82,12 @@ h1 {
 	text-align: left;
 }
 
+.loginForm {
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
 .logOutButton {
 	cursor: pointer;
 }
@@ -102,8 +107,6 @@ h5 {
 #wrapper {
 	width: 100%;
 	max-width: 100%;
-	/*min-width: 800px;*/
-	/*margin: 50px auto;*/
 }
 
 #columns {
