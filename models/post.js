@@ -23,11 +23,9 @@ var PostSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
-	comments: [{
-		body: String,
-		user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-		dateCreated: Date
-	}]
+	hashtag: {
+		type: String
+	}
 });
 
 // Module ready for use
