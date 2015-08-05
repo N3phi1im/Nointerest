@@ -23,8 +23,7 @@
 			url: '/profile',
 			templateUrl: 'views/Profile.html'
 		});
-
-
+ 
 		$urlRouterProvider.otherwise('/');
 	}
 })();

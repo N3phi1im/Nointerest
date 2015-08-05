@@ -37,7 +37,7 @@ app.engine('.html', require('ejs').renderFile);
 
 // Allow for these directories to be usable on the client side
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/dist'));
 app.use(express.static(__dirname + '/bower_components'));
 
 // Render Html using engine

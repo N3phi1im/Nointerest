@@ -1,4 +1,4 @@
-angular.module('app').controller('TestCtrl', function ($scope, $modal, $log) {
+angular.module('app').controller('TestCtrl', ["$scope", "$modal", function ($scope, $modal) {
 
   $scope.open = function (post) {
 
@@ -13,9 +13,9 @@ angular.module('app').controller('TestCtrl', function ($scope, $modal, $log) {
       }
     });
   };
-});
+}]);
 
-angular.module('app').controller('ModalInstanceCtrl', function ($scope, $modalInstance, post) {
+angular.module('app').controller('ModalInstanceCtrl', ["$scope", "$modalInstance", "post", function ($scope, $modalInstance, post) {
   $scope.post = post;
 
   $scope.ok = function () {
@@ -25,4 +25,4 @@ angular.module('app').controller('ModalInstanceCtrl', function ($scope, $modalIn
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
-});
+}]);

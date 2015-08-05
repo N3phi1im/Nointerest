@@ -11,7 +11,7 @@ angular.module('app').filter('searchFilter', function() {
             return;
         }
       if(item.hasOwnProperty('hashtag'))
-        if(item.hashtag.toLowerCase().indexOf(word.toLowerCase()) !== -1) {
+        if(item.hashtag.join().toLowerCase().indexOf(word.toLowerCase()) !== -1) {
           filtered.push(item);
           return;
         }

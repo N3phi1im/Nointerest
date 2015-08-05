@@ -16,7 +16,7 @@
 		vm.register = register;
 		vm.logOut = UserFactory.logOut;
 
-		// Functions list
+		// Functions list 
 
 		// Login User from Login.html
 

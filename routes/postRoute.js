@@ -59,19 +59,19 @@ router.post('/v1/api/Post', function(req, res, next) {
 
 // Comments to Post
 
-router.post('/v1/api/Post/:post/comment', auth, function(req, res, next) {
-	var newComment = req.body;
-	newComment.dateCreated = new Date();
-	newComment.user = req.payload.id;
-	Post.update({_id: req.post._id}, {$push: { comments: newComment }}, function(err, numberAffected) {
-		if(err) return next(err);
-		Post.findOne({_id: req.post._id}, function(err, post) {
-			if(err) return next(err);
-			var comment = post.comments[post.comments.length - 1];
-			res.send({_id: comment._id, dateCreated: comment.dateCreated});
-		});
-	});
-});
+// router.post('/v1/api/Post/:post/comment', auth, function(req, res, next) {
+// 	var newComment = req.body;
+// 	newComment.dateCreated = new Date();
+// 	newComment.user = req.payload.id;
+// 	Post.update({_id: req.post._id}, {$push: { comments: newComment }}, function(err, numberAffected) {
+// 		if(err) return next(err);
+// 		Post.findOne({_id: req.post._id}, function(err, post) {
+// 			if(err) return next(err);
+// 			var comment = post.comments[post.comments.length - 1];
+// 			res.send({_id: comment._id, dateCreated: comment.dateCreated});
+// 		});
+// 	});
+// });
 
 // Error Handling Function
 

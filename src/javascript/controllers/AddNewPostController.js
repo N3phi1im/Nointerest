@@ -11,8 +11,7 @@
 
 		var vm = this;
 
-		// Functions List
-
+		// Functions Lista
 		// Add New Post
 
 		vm.addPost = function () {
