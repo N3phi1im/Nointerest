@@ -67,7 +67,13 @@
 		var vm = this;
 		vm.logOut = UserFactory.logOut;
 		vm.posts = HomeFactory.posts;
-		vm.delete = HomeFactory.deletePost;
+
+		vm.delete = function (post) {
+			HomeFactory.deletePost(post).then(function (){
+				$state.go('home');
+				HomeFactory.getPost();
+			});
+		};
 
 	}
 })();
@@ -177,7 +183,7 @@ angular.module('app').filter('searchFilter', function() {
             return;
         }
       if(item.hasOwnProperty('hashtag'))
-        if(item.hashtag.toLowerCase().indexOf(word.toLowerCase()) !== -1) {
+        if(item.hashtag.join().toLowerCase().indexOf(word.toLowerCase()) !== -1) {
           filtered.push(item);
           return;
         }
@@ -230,9 +236,12 @@ angular.module('app').filter('searchFilter', function() {
 		// Delete Post by ID
 
 		function deletePost(post) {
+			var q = $q.defer();
 			$http.post('/v1/api/deletePost/' + post._id).success(function(res) {
 				o.posts.splice(o.posts.indexOf(post), 1);
+				q.resolve();
 			});
+			return q.promise;
 		}
 
 		// Retrieve Post by ID
