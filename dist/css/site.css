@@ -146,6 +146,7 @@ h5 {
   border-bottom: 1px solid #ccc;
   padding-bottom: 0px;
   margin-bottom: 0px;
+  cursor: pointer;
 }
 
 .pin p {
@@ -188,6 +189,7 @@ h4 {
   padding-left: 5px;
   padding-right: 5px;
   text-align: justify;
+  margin-bottom: 0px;
 }
 
 div.show-image {
@@ -196,7 +198,7 @@ div.show-image {
 }
 
 div.show-image:hover img {
-  opacity: 0.5;
+  opacity: 1;
 }
 
 div.show-image:hover button {
@@ -209,7 +211,7 @@ div.show-image button {
 }
 
 div.show-image button.deleteButton {
-  top: 5px;
+  bottom: 0px;
   right: 5px;
   width: 24px;
   height: 24px;
@@ -271,6 +273,7 @@ hr {
   float: left;
 }
 
-#nameAndIcon {
-  margin-top: 0px;
+#nameAndIcons {
+  margin-top: 5px;
+  margin-bottom: 0px;
 }
