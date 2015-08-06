@@ -170,32 +170,6 @@ angular.module('app').controller('ModalInstanceCtrl', ["$scope", "$modalInstance
   };
 }]);
 
-angular.module('app').filter('searchFilter', function() {
-   return function(items, word) {
-    if(!word) return items;
-    var filtered = [];
-
-    var pushed;
-    angular.forEach(items, function(item) {
-      if(item.hasOwnProperty('title'))
-        if(item.title.toLowerCase().indexOf(word.toLowerCase()) !== -1){
-            filtered.push(item);
-            return;
-        }
-      if(item.hasOwnProperty('hashtag'))
-        if(item.hashtag.join().toLowerCase().indexOf(word.toLowerCase()) !== -1) {
-          filtered.push(item);
-          return;
-        }
-      if(item.username.toLowerCase().indexOf(word.toLowerCase()) !== -1) {
-        filtered.push(item);
-      }
-    });
-
-    return filtered;
-  };
-});
-
 (function() {
 	'use strict';
 	angular.module('app')
@@ -283,15 +257,16 @@ angular.module('app').filter('searchFilter', function() {
 			o.status.isLoggedIn = true;
 			o.status.firstName = getFirstName();
 			o.status.lastName = getLastName();
+			// o.status.userImg = getUserImg();
 			o.status.username = getUserName();
 		} else { o.status.firstName = "Sign In"; }
-	o.setToken = setToken;
-	o.getToken = getToken;
-	o.removeToken = removeToken;
-	o.register = register;
-	o.login = login;
-	o.logOut = logOut;
-	return o;
+		o.setToken = setToken;
+		o.getToken = getToken;
+		o.removeToken = removeToken;
+		o.register = register;
+		o.login = login;
+		o.logOut = logOut;
+		return o;
 
 		// Functions list
 
@@ -335,6 +310,7 @@ angular.module('app').filter('searchFilter', function() {
 			o.status.firstName = getFirstName();
 			o.status.lastName = getLastName();
 			o.status.username = getUserName();
+			// o.status.userImg = getUserImg();
 		}
 
 		// Get token from Client Storage
@@ -367,5 +343,36 @@ angular.module('app').filter('searchFilter', function() {
 		function getUserName() {
 			return JSON.parse(atob(getToken().split('.')[1])).username;
 		}
+
+
+		// function getUserImg() {
+		// 	return JSON.parse(atob(getToken().split('.')[1])).userImg;
+		// }
 	}
 })();
+
+angular.module('app').filter('searchFilter', function() {
+   return function(items, word) {
+    if(!word) return items;
+    var filtered = [];
+
+    var pushed;
+    angular.forEach(items, function(item) {
+      if(item.hasOwnProperty('title'))
+        if(item.title.toLowerCase().indexOf(word.toLowerCase()) !== -1){
+            filtered.push(item);
+            return;
+        }
+      if(item.hasOwnProperty('hashtag'))
+        if(item.hashtag.join().toLowerCase().indexOf(word.toLowerCase()) !== -1) {
+          filtered.push(item);
+          return;
+        }
+      if(item.username.toLowerCase().indexOf(word.toLowerCase()) !== -1) {
+        filtered.push(item);
+      }
+    });
+
+    return filtered;
+  };
+});

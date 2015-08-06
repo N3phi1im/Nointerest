@@ -122,6 +122,7 @@ h5 {
 }
 
 .pin {
+	padding-bottom: 5px;
 	display: inline-block;
 	background: #FEFEFE;
 	border: 2px solid #FAFAFA;
@@ -130,8 +131,6 @@ h5 {
 	-webkit-column-break-inside: avoid;
 	-moz-column-break-inside: avoid;
 	column-break-inside: avoid;
-	padding: 0px;
-	padding-bottom: 0px;
 	background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
 	opacity: 1;
 	-webkit-transition: all .2s ease;
@@ -239,10 +238,20 @@ textarea {
 	padding: 2px;
 	font-size: 12px;
 	border-radius: 1px;
+	margin: 5px;
+	padding: 0px;
 }
 
 #userImg {
 	width: 10px;
 	heigth: 10px;
-	position: center;
+}
+
+#posts {
+	padding-bottom: 5px;
+}
+
+hr {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }

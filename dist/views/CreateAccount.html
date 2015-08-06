@@ -37,25 +37,19 @@
 
 				<div class="form-group">
 					<label for="userImg" class="col-lg-2 control-label">Upload Photo</label>
-					<form id="uploadForm"
-					enctype="multipart/form-data"
-					action="/api/photo"
-					method="post"
-					>
 					<div class="col-lg-10">
-						<input type="file" class="form-control" name="userImg" placeholder="Upload a file" ng-model="vm.user.userImg">
+						<input type="text" class="form-control" name="userImg" placeholder="Add your image URL" ng-model="vm.user.userImg">
 					</div>
-				</form>
-			</div>
-
-
-			<div class="form-group">
-				<div class="col-lg-10 col-lg-offset-2">
-					<button type="reset" ui-sref="login" class="btn btn-default">Cancel</button>
-					<button type="submit" class="btn btn-primary">Submit</button>
 				</div>
-			</div>
-		</fieldset>
-	</form>
-</div>
+
+
+				<div class="form-group">
+					<div class="col-lg-10 col-lg-offset-2">
+						<button type="reset" ui-sref="login" class="btn btn-default">Cancel</button>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
 </div>

@@ -15,15 +15,16 @@
 			o.status.isLoggedIn = true;
 			o.status.firstName = getFirstName();
 			o.status.lastName = getLastName();
+			// o.status.userImg = getUserImg();
 			o.status.username = getUserName();
 		} else { o.status.firstName = "Sign In"; }
-	o.setToken = setToken;
-	o.getToken = getToken;
-	o.removeToken = removeToken;
-	o.register = register;
-	o.login = login;
-	o.logOut = logOut;
-	return o;
+		o.setToken = setToken;
+		o.getToken = getToken;
+		o.removeToken = removeToken;
+		o.register = register;
+		o.login = login;
+		o.logOut = logOut;
+		return o;
 
 		// Functions list
 
@@ -67,6 +68,7 @@
 			o.status.firstName = getFirstName();
 			o.status.lastName = getLastName();
 			o.status.username = getUserName();
+			// o.status.userImg = getUserImg();
 		}
 
 		// Get token from Client Storage
@@ -99,5 +101,10 @@
 		function getUserName() {
 			return JSON.parse(atob(getToken().split('.')[1])).username;
 		}
+
+
+		// function getUserImg() {
+		// 	return JSON.parse(atob(getToken().split('.')[1])).userImg;
+		// }
 	}
 })();

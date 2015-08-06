@@ -2,20 +2,28 @@
 	<div id="wrapper">
 		<div id="columns" ng-controller="HomeController as vm" >
 			<!-- New pins -->
-			<div class="pin" ng-repeat="post in vm.posts | orderBy: '-dateCreated' | searchFilter: ix.search">
+			<div class="pin" id="posts" ng-repeat="post in vm.posts | orderBy: '-dateCreated' | searchFilter: ix.search" >
 				<img ng-src="{{post.img}}"  ng-click="open(post)"/>
 				<a href="{{post.url}}" target="_blank">
-					<h4>
-						{{post.title}}
-					</h4>
+					<span>
+						<h4>
+							{{post.title}}
+						</h4>
+					</span>
 				</a>
+				<hr>
+				<h4 ng-controller="IndexController as ix">
+					<strong>{{post.username}}</strong>
+				</h4>
+
+
 			</hr>
 			<span class="well" id="hashtagWell" ng-click="ix.search = hash" ng-repeat="hash in post.hashtag" ng-hide="!post.hashtag">
 				#{{hash}}
 			</span>	
 
 			<!-- Modal -->
-			<script type="text/ng-template" id="myModalContent.html">
+			<script type="text/ng-template" id="myModalContent.html" ng-controller="HomeController as vm"s>
 				<div class="modal-header">
 					<h3 class="modal-title">{{post.title}}</h3>
 				</div>
@@ -27,7 +35,7 @@
 					<span class="well" id="hashtagWell" ng-repeat="hash in post.hashtag" ng-hide="!post.hashtag">
 						#{{hash}}
 					</span>
-					
+
 					<button class="btn btn-primary" ng-click="ok()">OK</button>
 					<button class="btn btn-danger" ng-click="cancel()">Cancel</button>
 				</div>
