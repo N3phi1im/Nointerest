@@ -238,11 +238,11 @@ textarea {
 
 #hashtagWell {
 	height: 20px;
-	padding: 2px;
 	font-size: 12px;
 	border-radius: 1px;
-	margin: 5px;
-	padding: 2px;
+	margin: 2px;
+	padding: 4px;
+	display: inline-table;
 }
 
 #userImg {
@@ -272,7 +272,7 @@ hr {
 }
 
 #nameAndIcons {
-	margin-top: 5px;
+	margin-top: 10px;
 	margin-bottom: 0px;
 }
 
@@ -280,4 +280,10 @@ hr {
 	float: right;
 	width: 22px;
 	font-weight: bolder;
+}
+
+.hashT {
+	display: block;
+	margin-bottom: 3px;
+	width: 98%;
 }
