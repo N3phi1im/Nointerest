@@ -27,7 +27,9 @@
 			<!-- Modal -->
 			<script type="text/ng-template" id="myModalContent.html" ng-controller="HomeController as vm"s>
 				<div class="modal-header">
-					<h3 class="modal-title">{{post.title}}</h3>
+					<h3 class="modal-title">{{post.title}}>
+						<button type="button" class='btn btn-danger btn-xs' id="exitButton" ng-click="cancel()">X</button>
+					</h3>
 				</div>
 				<div class="modal-body">
 					<img ng-src="{{post.img}}" alt="" class="img-responsive">
@@ -40,8 +42,6 @@
 							#{{hash}}
 						</span>
 					</div>
-					<button class="btn btn-default" ng-click="ok()">OK</button>
-					<button class="btn btn-danger" ng-click="cancel()">Cancel</button>
 				</div>
 			</script>
 		</div>

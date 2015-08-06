@@ -216,6 +216,7 @@ div.show-image button.deleteButton {
   width: 24px;
   height: 24px;
   font-weight: bolder;
+  opacity: 0.5;
 }
 
 #addHashtag {
@@ -276,4 +277,10 @@ hr {
 #nameAndIcons {
   margin-top: 5px;
   margin-bottom: 0px;
+}
+
+#exitButton {
+  float: right;
+  width: 22px;
+  font-weight: bolder;
 }
