@@ -34,10 +34,12 @@
 
 				</div>
 				<div class="modal-footer">
-					<span class="well" id="hashtagWell" ng-repeat="hash in post.hashtag" ng-hide="!post.hashtag">
-						#{{hash}}
-					</span>
-
+					<div class="floatImgLeft">
+						<img id="userIcon" ng-src="{{post.userImg}}">
+						<span class="well" id="hashtagWell" ng-repeat="hash in post.hashtag" ng-hide="!post.hashtag">
+							#{{hash}}
+						</span>
+					</div>
 					<button class="btn btn-primary" ng-click="ok()">OK</button>
 					<button class="btn btn-danger" ng-click="cancel()">Cancel</button>
 				</div>
