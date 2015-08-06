@@ -6021,7 +6021,7 @@ th {
   }
   @media (min-width: 768px) {
     .modal-dialog {
-      width: 475px;
+      width: 500px;
       margin: 30px auto;
     }
     .modal-content {
@@ -6029,12 +6029,12 @@ th {
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     }
     .modal-sm {
-      width: 300px;
+      width: 500px;
     }
   }
   @media (min-width: 992px) {
     .modal-lg {
-      width: 475px;
+      width: 450px;
     }
   }
   .tooltip {
