@@ -15,7 +15,7 @@ require('./config/passport');
 
 // Connect to the DB
 
-mongoose.connect('mongodb://localhost/NoInterest');
+mongoose.connect('mongodb://n3phi1im:123123@ds031213.mongolab.com:31213/nointerest');
 
 // Routing
 
