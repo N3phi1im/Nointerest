@@ -6021,7 +6021,7 @@ th {
   }
   @media (min-width: 768px) {
     .modal-dialog {
-      width: 600px;
+      width: 475px;
       margin: 30px auto;
     }
     .modal-content {
@@ -6034,7 +6034,7 @@ th {
   }
   @media (min-width: 992px) {
     .modal-lg {
-      width: 900px;
+      width: 475px;
     }
   }
   .tooltip {
