@@ -20,7 +20,7 @@ h1 {
 	font-family: pacifico;
 	font-size: 100px;
 	padding-top: 5%;
-	margin-top: 0px;
+	margin-top: 0px
 }
 
 #loginBox {
@@ -239,7 +239,7 @@ textarea {
 	font-size: 12px;
 	border-radius: 1px;
 	margin: 5px;
-	padding: 0px;
+	padding: 2px;
 }
 
 #userImg {
@@ -260,10 +260,14 @@ hr {
 	width: 25px;
 	height: 25px;
 	border-radius: 50%;
-	margin: 5px;
+	margin: 5px 5px 5px 0px;
 	// float: left;
 }
 
 .floatImgLeft {
 	float: left;
+}
+
+#nameAndIcon {
+	margin-top: 0px;
 }

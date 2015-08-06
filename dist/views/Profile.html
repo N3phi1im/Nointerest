@@ -3,15 +3,14 @@
 		<div id="columns" ng-controller="HomeController as vm" >
 			<!-- New pins -->
 			<div class="pin" ng-repeat="post in vm.posts | orderBy: '-dateCreated' | filter: search">
-				<div class="show-image">
-					<img ng-src="{{post.img}}"  ng-click="open(post)"/>
-					<a href="{{post.url}}" target="_blank">
+				
+				<img ng-src="{{post.img}}"  ng-click="open(post)"/>
+				<a href="{{post.url}}" target="_blank">
+					<div class="show-image">
 						<h4>
 							{{post.title}}
 						</h4>
 					</a>
-
-
 					<button type="button" class='btn btn-danger btn-xs deleteButton' ng-click='vm.delete(post)'>X</button>
 				</div>
 
