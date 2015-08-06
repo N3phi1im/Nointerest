@@ -15,7 +15,7 @@
 			o.status.isLoggedIn = true;
 			o.status.firstName = getFirstName();
 			o.status.lastName = getLastName();
-			// o.status.userImg = getUserImg();
+			o.status.userImg = getUserImg();
 			o.status.username = getUserName();
 		} else { o.status.firstName = "Sign In"; }
 		o.setToken = setToken;
@@ -68,7 +68,7 @@
 			o.status.firstName = getFirstName();
 			o.status.lastName = getLastName();
 			o.status.username = getUserName();
-			// o.status.userImg = getUserImg();
+			o.status.userImg = getUserImg();
 		}
 
 		// Get token from Client Storage
@@ -103,8 +103,8 @@
 		}
 
 
-		// function getUserImg() {
-		// 	return JSON.parse(atob(getToken().split('.')[1])).userImg;
-		// }
+		function getUserImg() {
+			return JSON.parse(atob(getToken().split('.')[1])).userImg;
+		}
 	}
 })();

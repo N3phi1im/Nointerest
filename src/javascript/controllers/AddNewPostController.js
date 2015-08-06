@@ -16,6 +16,7 @@
 
 		vm.addPost = function () {
 			vm.post.username = UserFactory.status.username;
+			vm.post.userImg = UserFactory.status.userImg;
 			HomeFactory.addPost(vm.post).then(function() {
 				vm.post = {};
 				$state.go('home');

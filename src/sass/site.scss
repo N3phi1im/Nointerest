@@ -243,8 +243,8 @@ textarea {
 }
 
 #userImg {
-	width: 10px;
-	heigth: 10px;
+	width: 30px;
+	margin: 10px;
 }
 
 #posts {
@@ -254,4 +254,11 @@ textarea {
 hr {
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+
+#userIcon {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	margin: 5px;
 }

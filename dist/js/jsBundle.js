@@ -46,6 +46,7 @@
 
 		vm.addPost = function () {
 			vm.post.username = UserFactory.status.username;
+			vm.post.userImg = UserFactory.status.userImg;
 			HomeFactory.addPost(vm.post).then(function() {
 				vm.post = {};
 				$state.go('home');
@@ -257,7 +258,7 @@ angular.module('app').controller('ModalInstanceCtrl', ["$scope", "$modalInstance
 			o.status.isLoggedIn = true;
 			o.status.firstName = getFirstName();
 			o.status.lastName = getLastName();
-			// o.status.userImg = getUserImg();
+			o.status.userImg = getUserImg();
 			o.status.username = getUserName();
 		} else { o.status.firstName = "Sign In"; }
 		o.setToken = setToken;
@@ -310,7 +311,7 @@ angular.module('app').controller('ModalInstanceCtrl', ["$scope", "$modalInstance
 			o.status.firstName = getFirstName();
 			o.status.lastName = getLastName();
 			o.status.username = getUserName();
-			// o.status.userImg = getUserImg();
+			o.status.userImg = getUserImg();
 		}
 
 		// Get token from Client Storage
@@ -345,9 +346,9 @@ angular.module('app').controller('ModalInstanceCtrl', ["$scope", "$modalInstance
 		}
 
 
-		// function getUserImg() {
-		// 	return JSON.parse(atob(getToken().split('.')[1])).userImg;
-		// }
+		function getUserImg() {
+			return JSON.parse(atob(getToken().split('.')[1])).userImg;
+		}
 	}
 })();
 

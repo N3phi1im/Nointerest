@@ -11,7 +11,7 @@ var UserSchema = new mongoose.Schema({
 	username: { type: String, lowercase: true, unique: true},
 	firstName: { type: String, lowercase: true},
 	lastName: { type: String, lowercase: true},
-	// userImg: String,
+	userImg: String,
 	passwordHash: String,
 	salt: String
 });
@@ -41,7 +41,7 @@ UserSchema.methods.generateJWT = function() {
 		firstName: this.firstName,
 		lastName: this.lastName,
 		username: this.username,
-		// userImg: this.userImg,
+		userImg: this.userImg,
 		exp: parseInt(exp.getTime() / 1000)
 	}, 'StuffandThings');
 };

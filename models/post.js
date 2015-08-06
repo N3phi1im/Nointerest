@@ -19,6 +19,7 @@ var PostSchema = new mongoose.Schema({
 		type: Date,
 		default: null
 	},
+	userImg: String,
 	username: {
 		type: String,
 		required: true
